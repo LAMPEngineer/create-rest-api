@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteBase /CreateRESTfulAPIs/api/itemstore/v1/
+ 
+	RewriteCond %{SCRIPT_FILENAME} !-d
+	RewriteCond %{SCRIPT_FILENAME} !-f
+	 
+	RewriteRule ^.*$ ./index.php
+
+</IfModule>
